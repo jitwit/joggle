@@ -1,3 +1,4 @@
+require 'stats/bonsai'
 load 'joggle.ijs'
 
 NB. check
