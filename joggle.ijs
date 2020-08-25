@@ -3,8 +3,8 @@ coclass 'joggle'
 W =: = WS {~ :: 0: (WS=: <;._2 (1!:1) < 'collins-words.txt')&I.
 P =: = PS {~ :: 0: (PS=: <;._2 (1!:1) < 'collins-prefixes.txt')&I.
 R =: ({~?~@#) {"0 1~ [: ? #"1
-D4=: _6]\'NAEAEGEGNWEHCSOAHPLVERDYTOATOWPKAFFSHRVTWEHQUMNIEITSSORLTYETTITSYDLXEDIRTOIMCUBAOBOJNLNHZRENSIEU'
-score =: 0 0 0 1 1 2 3 5 11 {~ 8 <. #
+DICE =: _6]\'NAEAEGEGNWEHCSOAHPLVERDYTOATOWPKAFFSHRVTWEHQUMNIEITSSORLTYETTITSYDLXEDIRTOIMCUBAOBOJNLNHZRENSIEU'
+SCR =: 0 0 0 1 1 2 3 5 11 {~ 8 <. #
 
 NH =: <:3 3#:4-.~i.9
 G =: [: -.&_1 &.> [: , [: <"_2 [: ,"_2/ NH |.!._1 ]
@@ -14,10 +14,10 @@ QU =: 3 : 0
 Q =: QU ^: ('Q'&e.)
 L =: 1 : '(<@Q)"1 @ ({&u)'
 EP=: 2 : '< (#~ P @ (u L)) y,"_ 0/ y -.~ ({:y) {:: v'
-E =: 2 : '([: < [: ; u EP v"1 @ >) ^: (0<#@>@]) y'
-ORD =: (\: #&>) @ (/:~) @ ~.
+E =: 2 : '([: < [: ; u EP v"1 @ >) ^: (0<#@;) y'
+O =: (\: #&>) @ (/:~) @ ~.
 boggle =: 3 : 0
-  ORD (#~ W) ; (,y) L"1 &.> (,y) E (G i.$y) ^: a: <,:"0 i.#,y
+  O (#~ W) ; (,y) L"1 &.> (,y) E (G i.$y) ^: a: <,:"0 i.#,y
 )
 
 NB. misc
@@ -36,12 +36,11 @@ NB. x is shape, y is word
 board =: 4 : 0
   s =. (*/x) $ y
   out=. (i.$s) -. pth=. x random_walk #y
-  ltr =. (#out) {. R D4
+  ltr =. (#out) {. R DICE
   x $ toupper (y,ltr) (pth,out)}s
 )
 
-
-shake_board_z_ =: 3 : '4 4 $ R_joggle_ D4_joggle_'
+shake_board_z_ =: 3 : '4 4 $ R_joggle_ DICE_joggle_'
 board_z_ =: board_joggle_
 boggle_z_ =: boggle_joggle_
-score_z_ =: score_joggle_
+score_z_ =: SCR_joggle_
