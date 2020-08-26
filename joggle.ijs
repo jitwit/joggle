@@ -11,14 +11,13 @@ G =: [: <@-.&_1"1 @ |: [: ;"_1 (<:3 3#:4-.~i.9)&(|.!._1)
 QU =: 3 : 0 ^: ('Q'&e.)
   'U' (1+I.b)} y #~ 1+b=. 'Q'=y
 )
-L =: 1 : '<@QU"1 @ ({&u)'
 A =: [ ,"_ 0/ [ -.~ ] {::~ {:@[
 E =: 2 : 0
-  ([: < [: (#~ P @ (u L)) [: ; <@(A&v)"1 @ >) ^: (0<#@;) y
+  ([: < [: (#~ P @ <@QU"1 @ ({&u)) [: ; <@(A&v)"1 @ >) ^: (0<#@;) y
 )
 O =: (\: #&>) @ (/:~) @ ~.
-boggle =: 3 : 0
-  O (#~ W) ; (,y) L"1 &.> (,y) E (G i.$y) ^: a: <,:"0 i.#,y
+BB =: 3 : 0
+  O (#~ W) ; (<@QU"1@({&(,y))) &.> (,y) E (G i.$y) ^: a: <,:"0 i.#,y
 )
 
 NB. x is shape, y is word. output random board containing string y
@@ -32,5 +31,5 @@ B =: 4 : 0
 NB. zdefs
 shake_board_z_ =: 3 : '4 4 $ R_joggle_ D_joggle_'
 board_z_ =: B_joggle_
-boggle_z_ =: boggle_joggle_
+boggle_z_ =: BB_joggle_
 score_z_ =: S_joggle_
