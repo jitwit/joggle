@@ -8,7 +8,7 @@ DICE =: _6 ]\ DICE,'EITSSORLTYETTITSYDLXEDIRTOIMCUBAOBOJNLNHZRENSIEU'
 SCR =: 0 0 0 1 1 2 3 5 11 {~ 8 <. #
 
 NH =: <:3 3#:4-.~i.9
-G =: [: -.&_1 &.> [: , [: <"_2 [: ,"_2/ NH |.!._1 ]
+G =: [: <@-.&_1"1 @ |: [: ;"_1 NH&(|.!._1)
 QU =: 3 : 0
   (; ,&'U' &.> qs <;._2 y) , (1 i:~ qs=. 'Q'=y) }. y
 )
