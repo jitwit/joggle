@@ -8,14 +8,17 @@ D =: D,($D)$'EITSSORLTYETTITSYDLXEDIRTOIMCUBAOBOJNLNHZRENSIEU'
 S =: 0 0 0 1 1 2 3 5 11 {~ 8 <. #
 
 G =: [: <@-.&_1"1 @ |: [: ;"_1 (<:3 3#:4-.~i.9)&(|.!._1)
-QU =: 3 : '''U'' (1+I.b)} y #~ 1+b=. ''Q''=y'
-Q =: QU ^: ('Q'&e.)
+QU =: 3 : 0 ^: ('Q'&e.)
+  'U' (1+I.b)} y #~ 1+b=. 'Q'=y
+)
+L =: 1 : '<@QU"1 @ ({&u)'
 A =: [ ,"_ 0/ [ -.~ ] {::~ {:@[
 E =: 2 : 0
-  ([: < [: (#~ P@<@Q"1 @ ({&u)) [: ; (<@A&v)"1 @ >) ^: (0<#@;) y
+  ([: < [: (#~ P @ (u L)) [: ; <@(A&v)"1 @ >) ^: (0<#@;) y
 )
+O =: (\: #&>) @ (/:~) @ ~.
 boggle =: 3 : 0
-  (\: #&>) (/:~) ~. (#~ W) ; (,y) L"1 &.> (,y) E (G i.$y) ^: a: <,:"0 i.#,y
+  O (#~ W) ; (,y) L"1 &.> (,y) E (G i.$y) ^: a: <,:"0 i.#,y
 )
 
 NB. x is shape, y is word. output random board containing string y
