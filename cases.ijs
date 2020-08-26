@@ -4,6 +4,7 @@
 318 = # boggle 4 4 $ 'YVUPESTAGOLEOWNV'
 8 = # boggle 2 2 $ 'ABBA'
 25 = # boggle 3 2 $ 'GOOGLE'
+(<'QUADS') e. boggle 2 2 $ 'QADS'
 (<'JINGO') e. boggle 4 4 board 'jingo'
 (<'LAMBAST') e. boggle 4 4 board 'lambast'
 (<'INERTIA') e. boggle 4 4 board 'inertia'
