@@ -1,7 +1,7 @@
 coclass 'joggle'
 
-W =: = WS {~ :: 0: (WS=: <;._2 (1!:1) < 'collins-words.txt')&I.
-P =: = PS {~ :: 0: (PS=: <;._2 (1!:1) < 'collins-prefixes.txt')&I.
+W =: = WS {~ (WS=: (<,:255{a.),~<;._2 (1!:1) < 'collins-words.txt')&I.
+P =: = PS {~ (PS=: (<,:255{a.),~<;._2 (1!:1) < 'collins-prefixes.txt')&I.
 R =: ({~?~@#) {"0 1~ [: ? #"1
 D =: _6 ]\  'NAEAEGEGNWEHCSOAHPLVERDYTOATOWPKAFFSHRVTWEHQUMNI'
 D =: D,($D)$'EITSSORLTYETTITSYDLXEDIRTOIMCUBAOBOJNLNHZRENSIEU'
@@ -11,13 +11,14 @@ G =: [: <@-.&_1"1 @ |: [: ;"_1 (<:3 3#:4-.~i.9)&(|.!._1)
 QU =: 3 : 0 ^: ('Q'&e.)
   'U' (1+I.b)} y #~ 1+b=. 'Q'=y
 )
+L =: 1 : '<@QU"1 @ ({&u)'
 A =: [ ,"_ 0/ [ -.~ ] {::~ {:@[
 E =: 2 : 0
-  ([: < [: (#~ P @ <@QU"1 @ ({&u)) [: ; <@(A&v)"1 @ >) ^: (0<#@;) y
+  ([: < [: (#~ P @ (u L)) [: ; <@(A&v)"1 @ >) ^: (0<#@;) y
 )
 O =: (\: #&>) @ (/:~) @ ~.
 BB =: 3 : 0
-  O (#~ W) ; (<@QU"1@({&(,y))) &.> (,y) E (G i.$y) ^: a: <,:"0 i.#,y
+  O (#~ W) ; (,y) L"1 &.> (,y) E (G i.$y) ^: a: <,:"0 i.#,y
 )
 
 NB. x is shape, y is word. output random board containing string y
