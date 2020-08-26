@@ -3,7 +3,8 @@ coclass 'joggle'
 W =: = WS {~ :: 0: (WS=: <;._2 (1!:1) < 'collins-words.txt')&I.
 P =: = PS {~ :: 0: (PS=: <;._2 (1!:1) < 'collins-prefixes.txt')&I.
 R =: ({~?~@#) {"0 1~ [: ? #"1
-DICE =: _6]\'NAEAEGEGNWEHCSOAHPLVERDYTOATOWPKAFFSHRVTWEHQUMNIEITSSORLTYETTITSYDLXEDIRTOIMCUBAOBOJNLNHZRENSIEU'
+DICE =: 'NAEAEGEGNWEHCSOAHPLVERDYTOATOWPKAFFSHRVTWEHQUMNI'
+DICE =: _6 ]\ DICE,'EITSSORLTYETTITSYDLXEDIRTOIMCUBAOBOJNLNHZRENSIEU'
 SCR =: 0 0 0 1 1 2 3 5 11 {~ 8 <. #
 
 NH =: <:3 3#:4-.~i.9
@@ -13,8 +14,8 @@ QU =: 3 : 0
 )
 Q =: QU ^: ('Q'&e.)
 L =: 1 : '(<@Q)"1 @ ({&u)'
-EP=: 2 : '< (#~ P @ (u L)) y,"_ 0/ y -.~ ({:y) {:: v'
-E =: 2 : '([: < [: ; u EP v"1 @ >) ^: (0<#@;) y'
+E0 =: 2 : '< (#~ P @ (u L)) y,"_ 0/ y -.~ ({:y) {:: v'
+E =: 2 : '([: < [: ; u E0 v"1 @ >) ^: (0<#@;) y'
 O =: (\: #&>) @ (/:~) @ ~.
 boggle =: 3 : 0
   O (#~ W) ; (,y) L"1 &.> (,y) E (G i.$y) ^: a: <,:"0 i.#,y
