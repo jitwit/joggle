@@ -21,24 +21,12 @@ boggle =: 3 : 0
   O (#~ W) ; (,y) L"1 &.> (,y) E (G i.$y) ^: a: <,:"0 i.#,y
 )
 
-NB. misc
-NB. shape x, length y
-random_walk =: 4 : 0
-  assert. (1 <: y) *. y <: */ x
-  p =. ? # g =. G i. x
-  while. y > #p do.
-    v =. p -.~ g {::~ {. p
-    if. 0=#v do. p =. ? # g
-    else. p =. p,~({~ ?@#)v end.
-  end. p
-)
-
+WA =: 1 : 'y , ({~ ?@#) y -.~ ({:y) {:: u'
+doit =: 1 : 'u :: $:'
+RW0 =: 4 : 'try. (G i.x) WA ^: (<:y) ? */ x catch. x RW0 y end.'
 NB. x is shape, y is word
 board =: 4 : 0
-  s =. (*/x) $ y
-  out=. (i.$s) -. pth=. x random_walk #y
-  ltr =. (#out) {. R DICE
-  x $ toupper (y,ltr) (pth,out)}s
+  x $ toupper (y,R ((*/x)-#y)$DICE) ((p-.~i.n),~p=.x RW0 #y)} (n=.*/x) $ y
 )
 
 shake_board_z_ =: 3 : '4 4 $ R_joggle_ DICE_joggle_'
