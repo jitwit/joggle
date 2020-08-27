@@ -20,9 +20,10 @@ D =: _6 ]\  'NAEAEGEGNWEHCSOAHPLVERDYTOATOWPKAFFSHRVTWEHQUMNI'
 D =: D,($D)$'EITSSORLTYETTITSYDLXEDIRTOIMCUBAOBOJNLNHZRENSIEU'
 S =: 0 0 0 1 1 2 3 5 11 {~ 8 <. #
 
-NB. x is shape, y is word. output random board containing string y
-WA =: 4 : 'y , ({~ ?@#) y -.~ ({:y) {:: x'
-RW =: 4 : 'try. (G i.x)&WA ^: (<:y) ? */ x catch. x RW y end.'
+RW =: 4 : 0
+  try. (({~ ?@#) @ A&(G i.x)) ^: (<:y) ? */ x catch. x RW y end.
+)
+NB. output board with shape x containing word y
 RB =: 4 : 0
   assert. (#y) <: n=.*/x
   x $ toupper (y,R(n-#y)$D) ((p-.~i.n),~p=.x RW #y)} n $ y
