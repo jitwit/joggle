@@ -1,9 +1,8 @@
 coclass 'joggle'
 
 WL =: (<_1{.a.),~<;._2@(1!:1)@<@jpath@('~/code/joggle/'&,)
-'WS PS' =: WL &.> 'collins-words.txt';'collins-prefixes.txt'
-W =: = WS {~ WS&I.
-P =: = PS {~ PS&I.
+W =: = WS {~ (WS=. WL 'collins-words.txt')&I.
+P =: = PS {~ (PS=. WL 'collins-prefixes.txt')&I.
 
 G =: [: <@-.&_1"1 @ |: [: ;"_1 (<:3 3#:4-.~i.9)&(|.!._1)
 QU =: 3 : 0 ^: ('Q'&e.)
