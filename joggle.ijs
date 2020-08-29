@@ -15,19 +15,15 @@ E =: 2 : '([: < [: (#~ P @ (u L)) [: ; <@(A&v)"1 @ >) ^: (0<#@;) y'
 O =: (\: #&>) @ (/:~) @ ~.
 BB =: 3 : 'O (#~ W) ; (,y) L"1 &.> (,y) E (G i.$y) ^: a: <,:"0 i.#,y'
 
-D =: _6 ]\  'NAEAEGEGNWEHCSOAHPLVERDYTOATOWPKAFFSHRVTWEHQUMNI'
-D =: D,($D)$'EITSSORLTYETTITSYDLXEDIRTOIMCUBAOBOJNLNHZRENSIEU'
-AZ =: a.{~65+i.26
 BW =: Q^:_1 &.> (#~ 10<#&>) WS
 S =: 0 0 0 1 1 2 3 5 11 {~ 8 <. #
-
 RW =: 4 : 0
   try. (({~ ?@#) @ A&(G i.x)) ^: (<:y) ? */ x catch. x RW y end.
 )
 NB. output board with shape x containing word y
 RB =: 4 : 0
   assert. (#y=.Q^:_1 y) <: n=.*/x
-  x $ toupper (y,AZ{~?(n-#y)$26) ((p-.~i.n),~p=.x RW #y)} n $ y
+  x $ toupper (y,a.{~65+?(n-#y)$26) ((p-.~i.n),~p=.x RW #y)} n $ y
 )
 RL =: 3 : 'y RB > ({~ ?@#) BW'
 
