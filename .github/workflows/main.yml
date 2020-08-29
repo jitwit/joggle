@@ -13,8 +13,8 @@ jobs:
         run: sudo apt update
       - name : install J 
         run : |       
-          curl https://www.jsoftware.com/download/j901/install/j901_amd64.deb > j901_amd64.deb  
-          sudo apt install ./j901_amd64.deb
+          curl https://www.jsoftware.com/download/j901/install/j901_amd64.deb > j901_amd64.deb
+          sudo apt install wget ./j901_amd64.deb
           sudo ijconsole -js "install 'github:jitwit/joggle@a'"
       - name : check
         run : make J=ijconsole check
