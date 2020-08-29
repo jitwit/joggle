@@ -9,6 +9,7 @@ G =: [: <@-.&_1"1 @ |: [: ;"_1 (<:3 3#:4-.~i.9)&(|.!._1)
 QU =: 3 : 0 ^: ('Q'&e.)
   'U' (1+I.b)} y #~ 1+b=. 'Q'=y
 )
+DQ =: #~ [: -. _1 |. 'Q'&=
 L =: 1 : '<@QU"1 @ ({&u)'
 A =: [ ,"_ 0/ [ -.~ ] {::~ {:@[
 E =: 2 : '([: < [: (#~ P @ (u L)) [: ; <@(A&v)"1 @ >) ^: (0<#@;) y'
@@ -25,7 +26,7 @@ RW =: 4 : 0
 )
 NB. output board with shape x containing word y
 RB =: 4 : 0
-  assert. (#y) <: n=.*/x
+  assert. (#y=.DQ y) <: n=.*/x
   x $ toupper (y,R(n-#y)$D) ((p-.~i.n),~p=.x RW #y)} n $ y
 )
 
