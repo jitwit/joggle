@@ -3,7 +3,7 @@
 J = jconsole
 
 check : test.ijs
-	$(J) "$<" -js "exit bench test ''"
+	$(J) "$<" -js "exit test ''"
 
 boards.txt : boards.ijs
 	$(J) "$<" -js "exit 0"
