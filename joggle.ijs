@@ -19,9 +19,7 @@ BB =: 3 : 'O (#~ W) ; (,y) L"1 &.> (,y) E (G i.$y) ^: a: <,:"0 i.#,y'
 D =: _6 ]\  'NAEAEGEGNWEHCSOAHPLVERDYTOATOWPKAFFSHRVTWEHQUMNI'
 D =: D,($D)$'EITSSORLTYETTITSYDLXEDIRTOIMCUBAOBOJNLNHZRENSIEU'
 AZ =: a.{~65+i.26
-FQ =: +/\ (%+/) (+/^:2)"_1 AZ =/ D
-R =: AZ {~ ? @ $&26 NB. AZ {~ FQ I. ? @ $&0
-BW =: DQ &.> (#~ 8<#&>) WS
+BW =: DQ &.> (#~ 10<#&>) WS
 S =: 0 0 0 1 1 2 3 5 11 {~ 8 <. #
 
 RW =: 4 : 0
@@ -30,11 +28,10 @@ RW =: 4 : 0
 NB. output board with shape x containing word y
 RB =: 4 : 0
   assert. (#y=.DQ y) <: n=.*/x
-  x $ toupper (y,R n-#y) ((p-.~i.n),~p=.x RW #y)} n $ y
+  x $ toupper (y,AZ{~?(n-#y)$26) ((p-.~i.n),~p=.x RW #y)} n $ y
 )
 RL =: 3 : 'y RB > ({~ ?@#) BW'
 
-shake_board_z_ =: 3 : '4 4 $ R_joggle_ D_joggle_'
 shake_z_ =: RL_joggle_
 board_z_ =: RB_joggle_
 boggle_z_ =: BB_joggle_
