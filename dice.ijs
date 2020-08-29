@@ -11,10 +11,9 @@ FQS =: AZ ;"0 (%+/) (+/^:2)"_1 AZ =/ D
 SKS =: (#~ e.&AZ) toupper 1!:1 < jpath '~/code/J-esquisse/data/shakespeare.txt'
 FQS =: FQS ,. <"0 (%+/) > {:"1 /:~ ({.;#)/.~ SKS
 NB. (0 0 0,:255 255 255) viewmat > }."1 FQS
-HDR , FQS
+NB. HDR , FQS
 
 coinsert 'joggle'
-
 
 BW =: Q^:_1 &.> (#~ 8<#&>) WS
 ROLL =: 3 : 0
@@ -24,3 +23,7 @@ ROLL =: 3 : 0
 ORR =: ({~?~@#) {"0 1~ [: ? #"1
 OR =: 3 : '4 4 $ ORR D'
 
+demo =: 3 : 0
+ix =. #/.~ /:~ (i.16) , ; ; &.> BP eg =: RL 4 4
+(_3 ]\ 3 # 0 255) viewmat 4 4 $ ix
+)
