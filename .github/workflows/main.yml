@@ -1,0 +1,20 @@
+name: CI
+on:
+  push:
+    branches: [ a ]
+  pull_request:
+    branches: [ a ]
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+      - name: update
+        run: sudo apt update
+      - name : install J 
+        run : |       
+          curl https://www.jsoftware.com/download/j901/install/j901_amd64.deb > j901_amd64.deb  
+          sudo apt install ./j901_amd64.deb
+          ijconsole -js "install 'github:jitwit/joggle@a'"
+      - name : check
+        run : make check
