@@ -12,11 +12,11 @@ Q =: QU :. (#~ [: -. _1 |. 'QU'&E.)
 L =: 1 : '<@Q"1 @ ({&u)'
 A =: [ ,"_ 0/ [ -.~ ] {::~ {:@[
 E =: 2 : '([: (#~ P @ (u L)) [: ; <@(A&v)"1) ^: (0<#) &. >'
-BP =: 3 : '(,y) E (G i.$y) ^: a: <,.i.#,y'
-BB =: 3 : '(\:#&>) /:~ ~. (#~ W) ; (,y) L"1 &.> BP y'
+S =: 3 : '(,y) E (G i.$y) ^: a: <,.i.#,y'
+B =: 3 : '(\:#&>) /:~ ~. (#~ W) ; (,y) L"1 &.> S y'
 
 BW =: Q^:_1 &.> (#~ 10<#&>) WS
-S =: 0 0 0 1 1 2 3 5 8 13 {~ 8 <. #
+SC =: 0 0 0 1 1 2 3 5 8 13 {~ 8 <. #
 RW =: 4 : 0
   try. (({~ ?@#) @ A&(G i.x)) ^: (<:y) ? */ x catch. x RW y end.
 )
@@ -28,5 +28,5 @@ RL =: 3 : 'y RB > ({~ ?@#) BW'
 
 shake_z_ =: RL_joggle_
 board_z_ =: RB_joggle_
-boggle_z_ =: BB_joggle_
-score_z_ =: S_joggle_
+boggle_z_ =: B_joggle_
+score_z_ =: SC_joggle_

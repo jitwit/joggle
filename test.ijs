@@ -1,4 +1,4 @@
-load 'joggle.ijs'
+require 'joggle.ijs'
 
 test =: 3 : 0
 0!:2 < 'cases.ijs'
@@ -11,3 +11,5 @@ bb2=: 4 4 $ 'ODOEBIRNETYTKGNI'
 echo bonsai 'boggle bb1'
 echo bonsai 'boggle bb2'
 )
+
+test''
