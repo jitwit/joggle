@@ -1,4 +1,4 @@
-load 'joggle.ijs'
+require 'joggle.ijs'
 
 test =: 3 : 0
 0!:2 < 'cases.ijs'
@@ -13,5 +13,3 @@ echo bonsai 'boggle bb2'
 )
 
 test'' NB. requires j902-beta-i
-bench''
-
