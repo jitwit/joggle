@@ -1,8 +1,0 @@
-(<'QUADS') e. boggle 2 2 $ 'QADS'
-(<'JINGO') e. boggle 4 4 board 'jingo'
-(<'LAMBAST') e. boggle 4 4 board 'lambast'
-(<'INERTIA') e. boggle 4 4 board 'inertia'
-(<'HYPNOTIZABILITY') e. boggle 4 4 board 'HYPNOTIZABILITY'
-(<'FRUCTIFICATIONS') e. boggle 4 4 board 'FRUCTIFICATIONS'
-(<'DISEMBARKATIONS') e. boggle 4 4 board 'DISEMBARKATIONS'
-(<'DISCOUNTENANCES') e. boggle 4 4 board 'DISCOUNTENANCES'

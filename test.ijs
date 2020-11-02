@@ -1,8 +1,17 @@
-require 'joggle.ijs'
+load 'joggle.ijs'
 
-test =: 3 : 0
-0!:2 < 'cases.ijs'
+cases =: 0 : 0
+(<'QUADS') e. boggle 2 2 $ 'QADS'
+(<'JINGO') e. boggle 4 4 board 'jingo'
+(<'LAMBAST') e. boggle 4 4 board 'lambast'
+(<'INERTIA') e. boggle 4 4 board 'inertia'
+(<'HYPNOTIZABILITY') e. boggle 4 4 board 'HYPNOTIZABILITY'
+(<'FRUCTIFICATIONS') e. boggle 4 4 board 'FRUCTIFICATIONS'
+(<'DISEMBARKATIONS') e. boggle 4 4 board 'DISEMBARKATIONS'
+(<'DISCOUNTENANCES') e. boggle 4 4 board 'DISCOUNTENANCES'
 )
+
+test =: {{0!:101 cases}}
 
 bench =: 3 : 0
 load 'stats/bonsai'
