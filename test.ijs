@@ -25,5 +25,3 @@ echo bonsai 'boggle bb2'
 
 test'' NB. requires j902-beta-i
 
-eg =: 4 4 board 'HYPNOTIZABILITY'
-boggle eg

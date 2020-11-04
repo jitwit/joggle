@@ -1,6 +1,6 @@
 coclass 'joggle'
 
-WL =: (_1{.a.),~];._2@(1!:1)@<
+WL =: ' ' ,.~ (_1{.a.),~];._2@(1!:1)@<
 WLE =: WL 'collins-words.txt'
 NL =: ''$~0,{: $ WLP =: WL 'collins-prefixes.txt'
 W =: (-:"1 WLE {~ WLE&I.) @: (NL&,)
