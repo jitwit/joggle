@@ -1,14 +1,16 @@
 load 'joggle.ijs'
 
+AP =: {{ y e.~ (${:y) $!.' ' x }}
+
 cases =: 0 : 0
-(<'QUADS') e. boggle 2 2 $ 'QADS'
-(<'JINGO') e. boggle 4 4 board 'jingo'
-(<'LAMBAST') e. boggle 4 4 board 'lambast'
-(<'INERTIA') e. boggle 4 4 board 'inertia'
-(<'HYPNOTIZABILITY') e. boggle 4 4 board 'HYPNOTIZABILITY'
-(<'FRUCTIFICATIONS') e. boggle 4 4 board 'FRUCTIFICATIONS'
-(<'DISEMBARKATIONS') e. boggle 4 4 board 'DISEMBARKATIONS'
-(<'DISCOUNTENANCES') e. boggle 4 4 board 'DISCOUNTENANCES'
+'QUADS' AP boggle 2 2 $ 'QADS'
+'JINGO' AP boggle 4 4 board 'jingo'
+'LAMBAST' AP boggle 4 4 board 'lambast'
+'INERTIA' AP boggle 4 4 board 'inertia'
+'HYPNOTIZABILITY' AP boggle 4 4 board 'HYPNOTIZABILITY'
+'FRUCTIFICATIONS' AP boggle 4 4 board 'FRUCTIFICATIONS'
+'DISEMBARKATIONS' AP boggle 4 4 board 'DISEMBARKATIONS'
+'DISCOUNTENANCES' AP boggle 4 4 board 'DISCOUNTENANCES'
 )
 
 test =: {{0!:101 cases}}
@@ -22,3 +24,6 @@ echo bonsai 'boggle bb2'
 )
 
 test'' NB. requires j902-beta-i
+
+eg =: 4 4 board 'HYPNOTIZABILITY'
+boggle eg
