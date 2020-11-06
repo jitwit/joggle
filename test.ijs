@@ -27,3 +27,7 @@ echo bonsai 'boggle bb3'
 
 test '' NB. requires j902-beta-i
 NB. bench ''
+
+(,shake 70 70) 1!:2 < 'board.txt'
+
+$ boggle 70 70 $ 1!:1 < 'board.txt'

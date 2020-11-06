@@ -30,8 +30,14 @@ RB =: 4 : 0
 )
 RL =: {{ y RB > ({~ ?@#) BW }}
 
+DC =:          'NAEAEGEGNWEHCSOAHPLVERDYBAOBOJNLNHZRENSIEUTOIMCU'
+DC =: _6 ]\ DC,'TOATOWPKAFFSHRVTWEHQUMNIEITSSORLTYETTITSYDLXEDIR'
+SH =: {{y $ , ({~?~@#)({~?@$)"1 (*/y) $ ({~ ?~@#) DC}}
+
 NB. z-definitions that are not cryptic
-shake_z_ =: RL_joggle_
+shake_z_ =: SH_joggle_
+bake_z_ =: RL_joggle_
 board_z_ =: RB_joggle_
 boggle_z_ =: B_joggle_
 score_z_ =: SC_joggle_
+dice_z_ =: DC_joggle_
