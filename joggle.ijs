@@ -3,7 +3,7 @@ coclass 'joggle'
 NB. reading and querying word lists
 WL =: ' ' ,.~^:2 (_1{.a.),~];._2@(1!:1)@<
 NL =: ''$~0,{: $ PF=: WL'collins-prefixes.txt'[EX=: WL'collins-words.txt'
-L =: {:@$ - +/@(' '&=)
+L =: {:@$ - +/"1@(' '&=)
 W =: (-:"1 EX {~ EX&I.) @: (NL&,)
 P =: (-:"1 PF {~ PF&I.) @: (NL&,)
 
@@ -18,10 +18,10 @@ Q =: (QU :. (#~ [: -. _1 |. 'QU'&E.))"1
 NB. the search
 E =: {{ ([: (#~ P @: Q @ ({&u)) [: ; <@(A&v)"1) ^: (0<#) &. > }}
 S =: {{ (,y) E (G$y) ^: a: <,.i.#,y }}
-B =: {{ (\:#&>) /:~ (<@-.&' ')"1 (#~ W) ~. Q ; ({&(,y)) &.> S y }}
+B =: {{ (\: L) /:~ (#~ W) ~. Q ; ({&(,y)) &.> S y }}
 
 NB. generating boards
-BW =: Q^:_1 &.> (#~ 10<#&>) (({:$EX) - +/"1 ' ' = EX)
+BW =: Q (#~ 10 < L) EX
 SC =: 0 0 0 1 1 2 3 5 8 13 {~ 8 <. #
 RW =: {{try. (({~ ?@#) @ A&(G x)) ^: (<:y) ? */ x catch. x RW y end.}}
 RB =: 4 : 0
