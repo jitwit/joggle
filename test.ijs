@@ -11,7 +11,7 @@ cases =: 0 : 0
 (<'DISCOUNTENANCES') e. boggle 4 4 board 'DISCOUNTENANCES'
 )
 
-test =: {{0!:101 cases}}
+test =: {{0!:2 cases}}
 
 bench =: 3 : 0
 load 'stats/bonsai'
@@ -25,3 +25,4 @@ echo bonsai 'boggle bb3'
 
 test '' NB. requires j902-beta-i
 bench ''
+
