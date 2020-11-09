@@ -1,0 +1,43 @@
+* boggle Jtude
+
+What are the most common prefixes and suffixes?
+
+#+begin_src J :session :exports both :verb 0!:1
+coinsert 'joggle' [ require 'joggle.ijs'
+XE =: |."1 (- +/"1 ' ' = EX) |."0 1 EX
+prefixes =: {{ ,.&.>(<@:>)"1 |: x ];.0 \:~ (#;{.)/.~ y {."1 (#~ y<L) EX }}
+suffixes =: {{ ,.&.>(<@:>)"1 |. &.> |: x ];.0 \:~ (#;{.)/.~ y {."1 (#~ y<L) XE }}
+(;: 'prefixes suffixes') ,. ,"_1/ (10&(prefixes ,: suffixes))"0 ] 2 + i. 7
+#+end_src
+
+#+RESULTS:
+#+begin_example
+   coinsert 'joggle' [ require 'joggle.ijs'
+   XE =: |."1 (- +/"1 ' ' = EX) |."0 1 EX
+   prefixes =: {{ ,.&.>(<@:>)"1 |: x ];.0 \:~ (#;{.)/.~ y {."1 (#~ y<L) EX }}
+   suffixes =: {{ ,.&.>(<@:>)"1 |. &.> |: x ];.0 \:~ (#;{.)/.~ y {."1 (#~ y<L) XE }}
+   (;: 'prefixes suffixes') ,. ,"_1/ (10&(prefixes ,: suffixes))"0 ] 2 + i. 7
+┌────────┬─────┬──┬─────┬───┬────┬────┬────┬─────┬────┬──────┬───┬───────┬───┬────────┐
+│prefixes│9147 │CO│2857 │DIS│2341│OVER│1134│INTER│371 │COUNTE│361│COUNTER│67 │COUNTERP│
+│        │9107 │RE│2751 │CON│1291│INTE│ 873│SUPER│234 │ELECTR│197│ELECTRO│59 │COUNTERS│
+│        │7559 │UN│2504 │PRE│ 936│ANTI│ 787│UNDER│211 │HETERO│ 64│PHOSPHO│54 │ANTHROPO│
+│        │5974 │IN│2357 │OVE│ 935│UNDE│ 567│TRANS│166 │PSYCHO│ 58│BACTERI│49 │PHOSPHOR│
+│        │5867 │DE│2214 │PRO│ 875│SUPE│ 529│MICRO│160 │CONTRA│ 57│WEATHER│42 │EVANGELI│
+│        │5600 │PR│1775 │MIS│ 677│PARA│ 430│HYPER│159 │CIRCUM│ 56│ANTHROP│41 │SPERMATO│
+│        │5323 │DI│1753 │INT│ 644│TRAN│ 416│MULTI│156 │SUPERS│ 55│INTERCO│40 │SUBSTANT│
+│        │4828 │CA│1749 │OUT│ 617│COMP│ 412│COUNT│150 │INTERC│ 54│SPERMAT│39 │TRANQUIL│
+│        │4423 │SU│1650 │NON│ 571│MONO│ 404│PHOTO│132 │UNDERS│ 51│COMMUNI│38 │FRACTION│
+│        │4384 │ST│1609 │SUB│ 570│CONT│ 345│OVERS│128 │THERMO│ 49│SACCHAR│36 │PHENOMEN│
+├────────┼─────┼──┼─────┼───┼────┼────┼────┼─────┼────┼──────┼───┼───────┼───┼────────┤
+│suffixes│36048│ES│19354│ING│4179│NESS│3639│ESSES│3284│NESSES│879│INESSES│468│BILITIES│
+│        │20967│ED│ 8559│ERS│3991│SSES│3393│TIONS│2702│ATIONS│624│ENESSES│404│ISATIONS│
+│        │19666│NG│ 8255│SES│3962│INGS│3054│ATION│1106│ICALLY│543│ABILITY│402│IZATIONS│
+│        │11657│ER│ 7784│IES│3954│IONS│1728│ITIES│ 823│LITIES│532│ILITIES│291│ABLENESS│
+│        │11112│RS│ 5683│ESS│3799│TION│1403│ATING│ 704│BILITY│509│ISATION│280│OLOGISTS│
+│        │ 9021│NS│ 5136│ONS│3628│TING│1159│ISING│ 541│SATION│507│IZATION│251│OLOGICAL│
+│        │ 8876│TS│ 4412│ION│2455│ABLE│1135│CALLY│ 512│ZATION│450│TICALLY│226│EDNESSES│
+│        │ 8644│LY│ 4187│NGS│2343│IEST│1075│IZING│ 469│LOGIES│447│OLOGIES│225│USNESSES│
+│        │ 6012│ST│ 4143│TED│2059│TIES│1007│INGLY│ 414│USNESS│435│SATIONS│216│LENESSES│
+│        │ 5954│SS│ 3657│TES│2009│ALLY│ 973│ENESS│ 403│LENESS│412│OUSNESS│214│ICATIONS│
+└────────┴─────┴──┴─────┴───┴────┴────┴────┴─────┴────┴──────┴───┴───────┴───┴────────┘
+#+end_example

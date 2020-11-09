@@ -1,6 +1,8 @@
 
 * Boggle Solver in J
 
+See the [[./etude.org][Jtude]] file for some simple boggle-related calculations.
+
 ** reading and querying word lists
 
 #+begin_src J :session :exports both
