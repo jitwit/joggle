@@ -12,7 +12,7 @@ G =: [: <@-.&_1"1 @ |: [: ;"_1 (<:3 3#:4-.~i.9) |.!._1 i.
 A =: [ ,"_ 0/ [ -.~ ] {::~ {:@:[
 
 NB. handling Qs
-QU =: {{ 'U' (1+I.b)} y #~ 1+b=. 'Q'=y }} ^: ('Q'&e.)
+QU =: ('U'(1+[:I.'QQ'E.])}(#~1+'Q'&=)) ^: ('Q'&e.)
 Q =: (QU :. (#~ [: -. _1 |. 'QU'&E.))"1
 
 NB. the search
@@ -34,7 +34,7 @@ DC =:          'NAEAEGEGNWEHCSOAHPLVERDYBAOBOJNLNHZRENSIEUTOIMCU'
 DC =: _6 ]\ DC,'TOATOWPKAFFSHRVTWEHQUMNIEITSSORLTYETTITSYDLXEDIR'
 SH =: {{y $ , ({~?~@#)({~?@$)"1 (*/y) $ ({~ ?~@#) DC}}
 
-NB. z-definitions that are not cryptic
+NB. z-definitions that are less cryptic
 shake_z_ =: SH_joggle_
 bake_z_ =: RL_joggle_
 board_z_ =: RB_joggle_

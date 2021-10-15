@@ -34,5 +34,5 @@ echo bonsai 'boggle bb2'
 echo bonsai 'boggle bb3'
 )
 
-test 10 NB. requires j902-beta-i
-NB. bench ''
+test 100 NB. requires at least j902-beta-i
+bench ''
