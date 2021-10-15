@@ -10,6 +10,7 @@ W_joggle_ 'ABROGATION'
 0 e. ({:"1) 1 A_joggle_ G_joggle_ 4 4
 -. 0 e. ({:"1) 0 1 A_joggle_ G_joggle_ 4 4
 'SQUAD' -: Q_joggle_ 'SQAD'
+'QUAQUA' -: Q_joggle_ 'QAQA'
 'SQAD' -: Q_joggle_^:_1 'SQUAD'
 0 -: SC_joggle_ ''
 1 -: SC_joggle_ 'CAT'
